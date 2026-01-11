@@ -44,58 +44,6 @@ button {
 /* HERO */
 
 
-.hero-section {
-  height: 90vh;
-  background-image: url("./assets/hero-bg.png");
-  background-size: cover;
-  background-position: center;
-
-  position: relative;
-  display: flex;
-  align-items: center;
-  padding-left: 80px;
-  text-align: center;
-}
-
-/* dark overlay for readability */
-.hero-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-}
-
-.hero-text {
-  
-  max-width: 520px;
-  color: white;
-  text-align: center;
-}
-
-.hero-text h1 span {
-  color: #4caf50;
-  text-align: center;
-   display: flex;
-}
-
-.hero-buttons {
-  margin-top: 20px;
-  display: flex;
-  gap: 15px;
-}
-
-.hero-text h1 span {
-  color: #2e7d32;
-  text-align: center;
-  display: flex;
-}
-
-.hero-buttons {
-  margin-top: 20px;
-  display: flex;
-  gap: 15px;
-  background-color: #2e7d32;
-}
 
 /* INTRO */
 .intro {
@@ -171,23 +119,85 @@ button {
   color: white;
   font-size: 18px;
 }
-.hero-bg {
-  height: 90vh;
-  background-image: url("./assets/hero-bg.png");
-  background-size: cover;
-  background-position: center;
-  position: relative;
 
-  display: flex;
-  align-items: center;
-  padding-left: 80px;
-}
 
 /* dark overlay for readability */
-.hero-bg::before {
+
+.hero {
+  position: relative;
+  height: 100vh; /* full screen hero */
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-text {
+  position:center;
+  
+transform: translateY(-50%);
+  max-width: 600px;
+  color: white;
+  z-index: 2;
+  max-width: 600px;
+  color: white;
+  z-index: 2;
+  
+}
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;      /* vertical center */
+  justify-content: center;  /* horizontal center */
+  text-align: center;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* dark overlay */
+.hero::before {
   content: "";
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
 }
 
+.hero-text {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  color: white;
+}
+
+.hero-buttons {
+  display: inline-flex;      /* 🔴 flex না, inline-flex */
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* FORCE button size */
+.hero-buttons button {
+  display: inline-block;
+  width: fit-content;        /* 🔴 key line */
+  min-width: unset;
+  max-width: unset;
+  padding: 14px 28px;
+  border-radius: 8px;
+  white-space: nowrap;
+}
