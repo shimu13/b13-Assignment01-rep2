@@ -121,11 +121,11 @@ button {
 }
 
 
-/* dark overlay for readability */
+
 
 .hero {
   position: relative;
-  height: 100vh; /* full screen hero */
+  height: 100vh; 
   width: 100%;
   overflow: hidden;
 }
@@ -155,8 +155,8 @@ transform: translateY(-50%);
   overflow: hidden;
 
   display: flex;
-  align-items: center;      /* vertical center */
-  justify-content: center;  /* horizontal center */
+  align-items: center;     
+  justify-content: center;  
   text-align: center;
 }
 
@@ -185,7 +185,7 @@ transform: translateY(-50%);
 }
 
 .hero-buttons {
-  display: inline-flex;      /* 🔴 flex না, inline-flex */
+  display: inline-flex;     
   gap: 16px;
   justify-content: center;
   align-items: center;
@@ -194,7 +194,7 @@ transform: translateY(-50%);
 /* FORCE button size */
 .hero-buttons button {
   display: inline-block;
-  width: fit-content;        /* 🔴 key line */
+  width: fit-content;      
   min-width: unset;
   max-width: unset;
   padding: 14px 28px;
